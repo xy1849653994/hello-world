@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>爱心日食</title>
+		<style>
+			body{
+				margin:0;
+				background-color:#000;
+				animation:moveone 6s infinite linear alternate;
+			}
+		@keyframes moveone{
+				0%{background-color:skyblue;}
+				50%{background-color:#000;}
+				100%{background-color:skyblue;}
+			}
+			.love{
+				position:relative;
+				width:200px;
+				height:200px;
+				margin:100px auto;
+				background-color:transparent; 
+			}
+			.love:before{
+				content:'';
+				position:absolute;
+				left:29px;
+				width:100px;
+				height:160px;
+				background-color:yellow;
+				border-radius:50px 50px 0 0;
+				transform:rotateZ(-45deg);
+			}
+			.love:after{
+				content:'';
+				position:absolute;
+				right:29px;
+				width:100px;
+				height:160px;
+				background-color:yellow;
+				border-radius:50px 50px 0 0;
+				transform:rotateZ(45deg);
+			}
+			.love2{
+				position:relative;
+				width:100px;
+				height:100px;
+				margin:100px auto;
+				border-radius:100%;
+				background-color:none;
+				transform:translate(200px,-300px);
+				animation:movetwo 6s infinite alternate linear;
+			}
+			.love2:before{
+				content:'';
+				position:absolute;
+				left:29px;
+				width:100px;
+				height:160px;
+				border-radius:50px 50px 0 0;
+				transform:rotateZ(-45deg);
+			}
+			.love2:after{
+				content:'';
+				position:absolute;
+				right:-78px;
+				top:-12px;
+				width:100px;
+				height:170px;
+				border-radius:50px 50px 0 0;
+				transform:rotateZ(45deg);
+			}
+			.love2:before,.love2:after{
+				animation:movethree 6s infinite alternate linear;
+			}
+			@keyframes movethree{
+				0%{background-color:skyblue;}
+				50%{background-color:#000;}
+				100%{background-color:skyblue;}
+			}
+			@keyframes movetwo{
+				0%{transform:translate(150px,-300px);background-color:skyblue;}
+				50%{transform:translate(0px,-300px);background-color:#000;}
+				100%{transform:translate(-250px,-300px);background-color:skyblue;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="love"></div>
+		<div class="love2"></div>
+	</body>
+</html>
