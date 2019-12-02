@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Ì«¼«</title>
+  <style>
+  *{
+	margin:0;
+	padding:0;
+	background-color:#000000;
+  }
+  .box{
+	position:relative;
+	width:140px;
+	height:70px;
+	background-color:#000000;
+	margin:100px auto;
+	border-color:#ffffff;
+	border-width:2px 2px 72px 2px;
+	border-style:solid;
+	border-radius:50%;
+	animation:rot 4s infinite linear;
+  }
+  .box:before{
+	content:"";
+	position:absolute;
+	top:50%;
+	width:30px;
+	height:30px;
+	background-color:#ffffff;
+	border:20px solid #000000;
+	border-radius:50%;
+  }
+   .box:after{
+	content:"";
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:30px;
+	height:30px;
+	background-color:#000000;
+	border:20px solid #ffffff;
+	border-radius:50%;
+  }
+  @keyframes rot{
+   0%{
+	transform:rotate(0deg);
+   }
+  100%{
+	transform:rotate(360deg);
+  }
+  }
+  </style>
+ </head>
+ <body>
+  <div class="box">
+  </div>
+ </body>
+</html>

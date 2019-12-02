@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="小年轻">
+  <meta name="Keywords" content="彼岸花">
+  <meta name="Description" content="彼岸花">
+  <title>彼岸花</title>
+  <style>
+	body{
+		margin:0;
+		background-color:#000;
+	}
+	.overall{
+		position:relative;
+		width:600px;
+		height:600px;
+		margin:0 auto;
+		background:radial-gradient(#ff00cc,#660066,#000000);
+		z-index:-2;
+		-webkit-box-reflect:below 10px repeating-linear-gradient(0deg,rgba(0,0,0,.5),hotpink);
+	}
+	.stem{
+		position:absolute;
+		bottom:0;
+		left:290px;
+		width:20px;
+		height:300px;
+		border:1px solid rgba(29,35,29,.2);
+		background:linear-gradient(to bottom,#66ff66,#33cc66,#339933,#336600);
+		box-shadow:0 -2px 10px #33cc99;
+	}
+	.stem:after{
+		position:absolute;
+		content:'';
+		width:200px;
+		height:200px;
+		top:220px;
+		left:-90px;
+		border-radius:50%;
+		background:linear-gradient(to bottom,#ffcc66 10%,#000000 20%,transparent);
+		transform:scale(2,0.5);
+		overflow:hidden;
+		z-index:-1;
+	}
+	.flower{
+		position:absolute;
+		left:270px;
+		top:210px;
+		width:60px;
+		height:100px;
+		border-radius:20% 20% 50% 50%;
+		background:linear-gradient(to bottom,#ffccff,#ff66ff,#ff33ff,#ff0099);
+		box-shadow:0 0 20px #ff33cc;
+	}
+	.petalone{
+		position:absolute;
+		width:50px;
+		height:80px;
+		top:230px;
+		left:250px;
+		border-radius:50% 30% 50% 50%;
+		transform:rotateZ(-30deg);
+		background:linear-gradient(to bottom,#ffccff,#ff66ff,#ff33ff,#ff00ff);
+		box-shadow:0 0 20px #ff33cc;
+		animation:dropone 20s 5s linear;
+	}
+	@keyframes dropone{
+		0%{top:230px;left:250px;}
+		25%{transform:rotateZ(-40deg);top:320px;left:200px;}
+		50%{transform:rotateZ(-80deg);top:375px;left:230px;}
+		100%{transform:rotateZ(-40deg);top:530px;left:200px;}
+	}
+	.petaltwo{
+		position:absolute;
+		width:50px;
+		height:80px;
+		top:230px;
+		left:300px;
+		border-radius:30% 50% 50% 50%;
+		transform:rotateZ(30deg);
+		background:linear-gradient(to bottom,#ffccff,#ff66ff,#ff33ff,#ff00ff);
+		box-shadow:0 0 20px #ff33cc;
+		animation:droptwo 20s 4s linear;
+	}
+	@keyframes droptwo{
+		0%{top:230px;left:300px;}
+		25%{transform:rotateZ(40deg);top:320px;left:330px;}
+		50%{transform:rotateZ(80deg);top:375px;left:300px;}
+		100%{transform:rotateZ(40deg);top:530px;left:330px;}
+	}
+	.petalthree{
+		position:absolute;
+		width:40px;
+		height:70px;
+		top:220px;
+		left:280px;
+		border-radius:30% 30% 50% 50%;
+		background:linear-gradient(to bottom,#ffccff,#ff66ff,#ff33ff,#ff00ff);
+		box-shadow:0 0 20px #ff33cc;
+		animation:dropthree 20s 3s linear;
+	}
+	@keyframes dropthree{
+		0%{top:220px;left:280px;}
+		25%{transform:rotateZ(-40deg);top:320px;left:220px;}
+		50%{transform:rotateZ(-80deg);top:375px;left:250px;}
+		100%{transform:rotateZ(-40deg);top:530px;left:220px;}
+	}
+	.leafleft{
+		position:absolute;
+		width:40px;
+		height:80px;
+		top:250px;
+		left:250px;
+		transform:rotateZ(-70deg);
+		border-radius:40px / 80px;
+		background:linear-gradient(to bottom,#66ff66,#339933,#339933,#006600);
+		box-shadow:0 0 20px #00cc00;
+		animation:dropleft 20s linear;
+	}
+	@keyframes dropleft{
+		0%{top:250px;left:250px;}
+		25%{transform:rotateZ(-40deg);top:320px;left:220px;}
+		50%{transform:rotateZ(-80deg);top:375px;left:250px;}
+		100%{transform:rotateZ(-40deg);top:530px;left:220px;}
+	}
+	.leafright{
+		position:absolute;
+		width:40px;
+		height:80px;
+		top:250px;
+		left:310px;
+		transform:rotateZ(70deg);
+		border-radius:40px / 80px;
+		background:linear-gradient(to bottom,#66ff66,#339933,#339933,#006600);
+		box-shadow:0 0 20px #00cc00;
+		animation:dropright 20s 1s linear;
+	}
+	@keyframes dropright{
+		0%{top:250px;left:310px;}
+		25%{transform:rotateZ(40deg);top:320px;left:340px;}
+		50%{transform:rotateZ(80deg);top:375px;left:310px;}
+		100%{transform:rotateZ(40deg);top:530px;left:340px;}
+	}
+	.leafcenter{
+		position:absolute;
+		width:40px;
+		height:50px;
+		top:270px;
+		left:280px;
+		border-radius:30% 30% 50% 50%;
+		background:linear-gradient(to bottom,#66ff66,#339933,#339933,#006600);
+		box-shadow:0 0 20px #00cc00;
+		animation:dropcenter 20s 2s linear;
+	}
+	@keyframes dropcenter{
+		0%{top:270px;left:280px;}
+		25%{transform:rotateZ(10deg);top:300px;left:300px;}
+		50%{transform:rotateZ(-10deg);top:350px;left:320px;}
+		100%{transform:rotateZ(30deg);top:530px;left:280px;}
+	}
+  </style>
+ </head>
+ <body>
+  <div class="overall">
+	<div class="stem"></div>
+	<div class="flower"></div>
+	<div class="petalone"></div>
+	<div class="petaltwo"></div>
+	<div class="petalthree"></div>
+	<div class="leafleft"></div>
+	<div class="leafright"></div>
+	<div class="leafcenter"></div>
+  </div>
+ </body>
+</html>

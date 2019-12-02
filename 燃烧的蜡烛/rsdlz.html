@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="小年轻">
+  <meta name="Keywords" content="蜡烛">
+  <meta name="Description" content="蜡烛">
+  <title>燃烧的蜡烛</title>
+  <style>
+	body{
+		margin:0;
+		background-color:black;
+	}
+	.box{
+		width:300px;
+		height:600px;
+		background-color:transparent;
+		margin:0 auto;
+	}
+	.box1{
+		position:relative;
+		width:50px;
+		height:400px;
+		transform:translate(125px,200px);
+		background:linear-gradient(to bottom,white 80%,#221e22);
+		z-index:-1;
+	}
+	.box1:before{
+		position:absolute;
+		content:"";
+		width:50px;
+		height:20px;
+		top:-10px;
+		border-radius:50px/20px;
+		background:radial-gradient(rgb(135,135,135),white);
+	}
+	.box2{
+		position:relative;
+		width:30px;
+		height:120px;
+		transform:translate(133px,-335px);
+		border-radius:30px/120px;
+		background:linear-gradient(to top,rgb(65,97,203) ,rgb(238,233,231) 30%,rgb(238,233,231));
+		box-shadow:0px -15px 60px orange;
+		animation:rot 0.1s infinite alternate;
+	}
+	.box2:before{
+		content:"";
+		position:absolute;
+		width:10px;
+		height:50px;
+		top:85px;
+		left:10px;
+		border-radius:10px/50px;
+		background:linear-gradient(to top,rgb(200,130,1),black);
+	}
+	@keyframes rot{
+		0%{
+			box-shadow:0px -10px 60px transparent;border-radius:30px/150px;
+		}
+		100%{
+			box-shadow:0px -10px 60px orange;border-radius:30px/120px;
+		}
+	}
+  </style>
+ </head>
+ <body>
+  <div class="box">
+	<div class="box1"></div>
+	<div class="box2"></div>
+  </div>
+ </body>
+</html>
